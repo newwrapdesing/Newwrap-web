@@ -4,68 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>New Wrap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #121212;
-      color: #f0f0f0;
-      font-family: sans-serif;
-      padding: 20px;
+      background: #111;
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      margin: 0;
+      padding: 0;
     }
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #1a1a1a;
+      background: #000;
       border-bottom: 3px solid #ff4500;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav ul {
       display: flex;
       justify-content: center;
-      list-style: none;
       margin: 0;
       padding: 0;
+      list-style: none;
+    }
+    nav li {
+      margin: 0 15px;
     }
     nav a {
       color: #ff4500;
-      padding: 15px;
       text-decoration: none;
-      font-weight: bold;
+      padding: 15px;
       display: block;
     }
     h1 {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 3em;
       color: #ff4500;
-      margin-top: 70px;
+      text-shadow: 2px 2px #000;
+    }
+    section {
+      padding: 30px 20px;
       text-align: center;
     }
     img {
       width: 80%;
       max-width: 300px;
-      margin: 10px auto;
-      display: block;
+      margin: 15px;
       border-radius: 10px;
       box-shadow: 0 0 10px #ff4500;
     }
     footer {
+      background: #000;
+      color: #aaa;
       text-align: center;
-      margin-top: 20px;
-      color: #888;
+      padding: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input, textarea {
+      width: 90%;
+      max-width: 400px;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background: #ff4500;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <nav><ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#productos">Productos</a></li>
-    <li><a href="#patrocinios">Patrocinios</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul></nav>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#tienda">Tienda</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-  <h1 id="inicio">New Wrap</h1>
-  <p style="text-align:center;">Parasoles y pegatinas callejeras</p>
+  <h1 id="inicio">NEW WRAP</h1>
 
-  <section id="productos">
+  <section id="catalogo">
+    <h2>Catálogo</h2>
     <img src="https://via.placeholder.com/300x200?text=Parasol+1" alt="Parasol">
     <img src="https://via.placeholder.com/300x200?text=Pegatina+1" alt="Pegatina">
+    <p>Más estilos disponibles muy pronto...</p>
+  </section>
+
+  <section id="tienda">
+    <h2>Tienda</h2>
+    <p>Estamos preparando nuestra tienda online. Mientras tanto, encarga por Instagram o WhatsApp.</p>
+    <p><a href="https://www.instagram.com/newwrapdesing" style="color:#fff;">@newwrapdesing</a></p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu email" required />
+      <textarea placeholder="Tu mensaje" rows="4"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
