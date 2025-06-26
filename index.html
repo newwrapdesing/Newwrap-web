@@ -35,6 +35,7 @@
       text-decoration: none;
       padding: 15px;
       display: block;
+      font-size: 1.1em;
     }
     h1 {
       text-align: center;
@@ -47,23 +48,45 @@
       padding: 30px 20px;
       text-align: center;
     }
-    img {
-      width: 80%;
+    section h2 {
+      font-size: 2.5em;
+      color: #ff4500;
+      margin-bottom: 20px;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .galeria img {
+      width: 90%;
       max-width: 300px;
       margin: 15px;
       border-radius: 10px;
       box-shadow: 0 0 10px #ff4500;
+      transition: transform 0.3s ease;
     }
-    footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff6347;
+    }
+    .btn-enlace {
+      background: #ff4500;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .btn-enlace:hover {
+      background: #ff6347;
     }
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 30px;
     }
     input, textarea {
       width: 90%;
@@ -72,14 +95,27 @@
       padding: 10px;
       border: none;
       border-radius: 5px;
+      font-family: 'Arial', sans-serif;
+      font-size: 1em;
     }
     button {
       background: #ff4500;
       border: none;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       font-weight: bold;
       cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #ff6347;
+    }
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
@@ -97,24 +133,28 @@
 
   <section id="catalogo">
     <h2>Catálogo</h2>
-    <img src="https://via.placeholder.com/300x200?text=Parasol+1" alt="Parasol">
-    <img src="https://via.placeholder.com/300x200?text=Pegatina+1" alt="Pegatina">
-    <p>Más estilos disponibles muy pronto...</p>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1516637090014-cb1ab3883d36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTI4MTF8MHwxfHNlYXJjaHwxfHxjYXJ8ZW58MHx8fHwxNjg3OTUwMTQ4&ixlib=rb-4.0.3&q=80&w=400"
+           alt="Parasol ejemplo">
+      <img src="https://images.unsplash.com/photo-1557682250-8e8e77c29036?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTI4MTF8MHwxfHNlYXJjaHwxfHxzdGlja2VyfGVufDB8fHx8MTY4Nzk1MDE3Ng&ixlib=rb-4.0.3&q=80&w=400"
+           alt="Pegatina ejemplo">
+    </div>
+    <p>Diseños actuales y callejeros. Pronto más estilos.</p>
   </section>
 
   <section id="tienda">
     <h2>Tienda</h2>
-    <p>Estamos preparando nuestra tienda online. Mientras tanto, encarga por Instagram o WhatsApp.</p>
-    <p><a href="https://www.instagram.com/newwrapdesing" style="color:#fff;">@newwrapdesing</a></p>
+    <p>Estamos preparando nuestra tienda online. Mientras tanto, puedes encargar por Instagram o WhatsApp:</p>
+    <a href="https://www.instagram.com/newwrapdesing" class="btn-enlace" target="_blank">@newwrapdesing</a>
   </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
-    <form>
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu email" required />
-      <textarea placeholder="Tu mensaje" rows="4"></textarea>
-      <button type="submit">Enviar</button>
+    <form action="mailto:info@newwrap.com" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu email" required />
+      <textarea name="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
+      <button type="submit">Enviar mensaje</button>
     </form>
   </section>
 
