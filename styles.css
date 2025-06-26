@@ -237,3 +237,19 @@ button:hover {
 h1, h2, p, label {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* texto normal más legible */
 }
+.patro-logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.patro-logo img {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.patro-logo a {
+  font-weight: bold;
+  color: #1de9b6;
+  text-decoration: none;
+}
