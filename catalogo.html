@@ -21,28 +21,35 @@
   <div class="content">
     <h1 class="graffiti">Catálogo de productos por encargo</h1>
 
-    <!-- Parasol personalizado con slider -->
-    <div class="producto">
-      <div class="slider">
-        <button class="prev" onclick="cambiarSlide(-1)">❮</button>
-        <div class="slide-container">
-          <img class="slide activo" src="parasol-frontal.jpg" alt="Parasol frontal">
-          <img class="slide" src="parasol-derecha.jpg" alt="Parasol lateral derecho">
-          <img class="slide" src="parasol-izquierda.jpg" alt="Parasol lateral izquierdo">
+    <div class="fila-productos">
+      <!-- Parasol con sensor -->
+      <div class="producto">
+        <div class="slider">
+          <button class="prev" onclick="cambiarSlide(-1)">❮</button>
+          <div class="slide-container">
+            <img class="slide activo" src="parasol-frontal.jpg" alt="Parasol frontal">
+            <img class="slide" src="parasol-derecha.jpg" alt="Parasol lateral derecho">
+            <img class="slide" src="parasol-izquierda.jpg" alt="Parasol lateral izquierdo">
+          </div>
+          <button class="next" onclick="cambiarSlide(1)">❯</button>
         </div>
-        <button class="next" onclick="cambiarSlide(1)">❯</button>
+        <p class="graffiti">¡Parasol personalizado con sensor! 😎</p>
+        <p>Diseño exclusivo en 3 ángulos. ¡Llévatelo desde <strong>20€</strong>!</p>
       </div>
-      <p class="graffiti">¡Parasol personalizado con sensor! 😎</p>
-      <p>Diseño exclusivo en 3 ángulos. ¡Llévatelo desde <strong>20€</strong>! Encárgalo con tu estilo único.</p>
-    </div>
 
-    <!-- Tapamatrícula Hyundai -->
-    <div class="producto">
-      <img src="tapamatricula-hyundai.jpg" alt="Tapamatrícula Hyundai personalizado">
-      <p class="graffiti">Tapamatrículas personalizados</p>
-      <p>Haz que tu matrícula hable por ti 💥<br>
-      Diseño Hyundai personalizado.<br>
-      <strong>Desde 20€ (pareja)</strong></p>
+      <!-- Parasol sin sensor (renombrado a sombrilla) -->
+      <div class="producto">
+        <div class="slider">
+          <button class="prev" onclick="cambiarSlide(-1)">❮</button>
+          <div class="slide-container">
+            <img class="slide activo" src="sombrilla-liso1.jpg" alt="Sombrilla sin sensor - frente">
+            <img class="slide" src="sombrilla-liso2.jpg" alt="Sombrilla sin sensor - ángulo">
+          </div>
+          <button class="next" onclick="cambiarSlide(1)">❯</button>
+        </div>
+        <p class="graffiti">Parasol personalizado sin sensor</p>
+        <p>Estilo sencillo y limpio desde <strong>15€</strong>. Personalízalo a tu gusto.</p>
+      </div>
     </div>
   </div>
 
@@ -50,25 +57,26 @@
     Patrocinado por @Newurbaracingclub
   </footer>
 
-  <!-- Slider JS corregido -->
   <script>
     window.onload = function () {
-      let slideIndex = 0;
-      const slides = document.querySelectorAll(".slide");
+      let currentSlideIndexes = [];
+      const sliders = document.querySelectorAll(".slider");
 
-      function mostrarSlide(n) {
-        slides.forEach(slide => slide.classList.remove("activo"));
-        slideIndex = (n + slides.length) % slides.length;
-        slides[slideIndex].classList.add("activo");
-      }
+      sliders.forEach((slider, i) => {
+        currentSlideIndexes[i] = 0;
+        const slides = slider.querySelectorAll(".slide");
 
-      function cambiarSlide(n) {
-        mostrarSlide(slideIndex + n);
-      }
+        function showSlide(n) {
+          slides.forEach(slide => slide.classList.remove("activo"));
+          currentSlideIndexes[i] = (n + slides.length) % slides.length;
+          slides[currentSlideIndexes[i]].classList.add("activo");
+        }
 
-      window.cambiarSlide = cambiarSlide;
+        slider.querySelector(".prev").onclick = () => showSlide(currentSlideIndexes[i] - 1);
+        slider.querySelector(".next").onclick = () => showSlide(currentSlideIndexes[i] + 1);
 
-      mostrarSlide(slideIndex);
+        showSlide(currentSlideIndexes[i]);
+      });
     };
   </script>
 </body>
