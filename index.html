@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>New Wrap</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
   <style>
     body {
       background: #111;
@@ -15,7 +15,7 @@
     }
     nav {
       background: #000;
-      border-bottom: 3px solid #ff4500;
+      border-bottom: 3px solid #1de9b6; /* azul/verde tuning */
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -31,17 +31,20 @@
       margin: 0 15px;
     }
     nav a {
-      color: #ff4500;
+      color: #1de9b6; /* nuevo color */
       text-decoration: none;
       padding: 15px;
       display: block;
       font-size: 1.1em;
     }
+    nav a:hover {
+      color: #00bfa5;
+    }
     h1 {
       text-align: center;
       margin-top: 60px;
       font-size: 3em;
-      color: #ff4500;
+      color: #1de9b6;
       text-shadow: 2px 2px #000;
     }
     section {
@@ -50,7 +53,7 @@
     }
     section h2 {
       font-size: 2.5em;
-      color: #ff4500;
+      color: #1de9b6;
       margin-bottom: 20px;
     }
     .galeria {
@@ -63,24 +66,26 @@
       max-width: 300px;
       margin: 15px;
       border-radius: 10px;
-      box-shadow: 0 0 10px #ff4500;
+      box-shadow: 0 0 10px #1de9b6;
       transition: transform 0.3s ease;
     }
     .galeria img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px #ff6347;
+      box-shadow: 0 0 20px #00bfa5;
     }
     .btn-enlace {
-      background: #ff4500;
-      color: #fff;
+      background: #1de9b6;
+      color: #000;
       padding: 10px 20px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
       transition: background 0.3s ease;
+      display: inline-block;
     }
     .btn-enlace:hover {
-      background: #ff6347;
+      background: #00bfa5;
+      color: #fff;
     }
     form {
       display: flex;
@@ -99,9 +104,9 @@
       font-size: 1em;
     }
     button {
-      background: #ff4500;
+      background: #1de9b6;
       border: none;
-      color: white;
+      color: black;
       padding: 12px 25px;
       font-weight: bold;
       cursor: pointer;
@@ -109,13 +114,32 @@
       transition: background 0.3s ease;
     }
     button:hover {
-      background: #ff6347;
+      background: #00bfa5;
+      color: white;
     }
     footer {
       background: #000;
       color: #aaa;
       text-align: center;
       padding: 20px;
+    }
+    /* Nuevo apartado patrocinador */
+    #patrocinador {
+      background: #000;
+      border-top: 3px solid #1de9b6;
+      padding: 30px 20px;
+      margin-top: 40px;
+      text-align: center;
+      color: #1de9b6;
+    }
+    #patrocinador h2 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+    #patrocinador p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -126,6 +150,7 @@
       <li><a href="#catalogo">Catálogo</a></li>
       <li><a href="#tienda">Tienda</a></li>
       <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#patrocinador">Patrocinador</a></li>
     </ul>
   </nav>
 
@@ -135,9 +160,9 @@
     <h2>Catálogo</h2>
     <div class="galeria">
       <img src="https://images.unsplash.com/photo-1516637090014-cb1ab3883d36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTI4MTF8MHwxfHNlYXJjaHwxfHxjYXJ8ZW58MHx8fHwxNjg3OTUwMTQ4&ixlib=rb-4.0.3&q=80&w=400"
-           alt="Parasol ejemplo">
+           alt="Parasol ejemplo" />
       <img src="https://images.unsplash.com/photo-1557682250-8e8e77c29036?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTI4MTF8MHwxfHNlYXJjaHwxfHxzdGlja2VyfGVufDB8fHx8MTY4Nzk1MDE3Ng&ixlib=rb-4.0.3&q=80&w=400"
-           alt="Pegatina ejemplo">
+           alt="Pegatina ejemplo" />
     </div>
     <p>Diseños actuales y callejeros. Pronto más estilos.</p>
   </section>
@@ -145,7 +170,7 @@
   <section id="tienda">
     <h2>Tienda</h2>
     <p>Estamos preparando nuestra tienda online. Mientras tanto, puedes encargar por Instagram o WhatsApp:</p>
-    <a href="https://www.instagram.com/newwrapdesing" class="btn-enlace" target="_blank">@newwrapdesing</a>
+    <a href="https://www.instagram.com/newwrap2024" class="btn-enlace" target="_blank">@newwrap2024</a>
   </section>
 
   <section id="contacto">
@@ -156,6 +181,14 @@
       <textarea name="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
       <button type="submit">Enviar mensaje</button>
     </form>
+  </section>
+
+  <section id="patrocinador">
+    <h2>@newurbaracingclub</h2>
+    <p>
+      Club patrocinador oficial dedicado a eventos de exposición de automovilismo,  
+      con pasión por el tuning y la cultura callejera.
+    </p>
   </section>
 
   <footer>
