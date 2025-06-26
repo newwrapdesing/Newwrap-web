@@ -1,143 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>New Wrap - Contacto</title>
+  <title>New Wrap - Catálogo</title>
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Bangers', cursive;
-      color: #f5f5f5;
-      background-color: #111;
-      background-image: radial-gradient(circle, #ff6f00 2px, transparent 2px);
-      background-size: 40px 40px;
-      min-height: 100vh;
-    }
-    nav {
-      background: #ff6f00cc;
-      border-bottom: 3px solid #008080;
-      position: sticky; top: 0; z-index: 1000;
-    }
-    nav ul {
-      display: flex; justify-content: center;
-      margin: 0; padding: 0; list-style: none;
-    }
-    nav li {
-      margin: 0 15px;
-    }
-    nav a {
-      color: #f5f5f5;
-      text-decoration: none;
-      padding: 15px;
-      display: block;
-      font-size: 1.1em;
-      transition: color 0.3s, background-color 0.3s;
-    }
-    nav a:hover {
-      color: #ff6f00;
-      background-color: #008080;
-      border-radius: 5px;
-    }
-    h2 {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 2.8em;
-      color: #ff6f00;
-      text-shadow: 2px 2px 6px #009999;
-    }
-    section {
-      max-width: 600px;
-      margin: 40px auto;
-      background: #223344;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #ff6f0044;
-      font-size: 1.3em;
-      line-height: 1.6em;
-      color: #ddd;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    label {
-      font-weight: bold;
-      color: #ff6f00;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      font-size: 1em;
-      font-family: 'Bangers', cursive;
-      background-color: #2a3a4a;
-      color: #f5f5f5;
-      resize: vertical;
-    }
-    textarea {
-      min-height: 100px;
-    }
-    button {
-      background-color: #ff6f00;
-      border: none;
-      padding: 15px;
-      border-radius: 10px;
-      font-family: 'Bangers', cursive;
-      font-size: 1.2em;
-      color: #111;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      font-weight: bold;
-    }
-    button:hover {
-      background-color: #008080;
-      color: #fff;
-    }
-    footer {
-      background: #ff6f00cc;
-      color: #111;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-  </style>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="catalogo.html">Catálogo</a></li>
-      <li><a href="tienda.html">Tienda</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="patrocinador.html">Patrocinador</a></li>
-    </ul>
-  </nav>
 
-  <h2>Contacto</h2>
-  <section>
-    <form action="#" method="post" novalidate>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+<main>
+  <h1>Contacto</h1>
+  <p>¿Tienes preguntas? Escríbenos a través de Instagram: <a href="https://instagram.com/newwrap2024" target="_blank">@newwrap2024</a></p>
+</main>
 
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required placeholder="tu@email.com" />
 
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+  <aside>
+    <h2>Menú</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="patrocinador.html">Patrocinador</a></li>
+      </ul>
+    </nav>
+  </aside>
 
   <footer>
-    <p>© 2025 New Wrap</p>
+    Patrocinador por <strong>@Newurbaracingclub</strong>
   </footer>
+
 </body>
 </html>
