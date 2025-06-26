@@ -11,13 +11,13 @@ body {
   left: 0;
   width: 220px;
   height: 100%;
-  background-color: #7f3fbf;
+  background-color: #7f3fbf; /* Morado */
   padding: 20px;
   box-sizing: border-box;
 }
 
 .sidebar h2 {
-  color: #1de9b6;
+  color: #1de9b6; /* Turquesa vibrante */
 }
 
 .sidebar a {
@@ -28,6 +28,12 @@ body {
   margin: 10px 0;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sidebar a:hover {
+  background-color: #17c9a3;
 }
 
 .content {
@@ -40,6 +46,7 @@ footer {
   padding: 10px;
   background-color: #ddd;
   text-align: center;
+  font-size: 14px;
 }
 
 form label {
@@ -51,6 +58,8 @@ input, textarea {
   margin-bottom: 10px;
   padding: 8px;
   box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 4px;
 }
 
 button {
@@ -60,18 +69,30 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #17c9a3;
 }
 
 .precio {
   font-weight: bold;
   color: #000;
 }
-.logo-inicio {
+
+/* LOGOS */
+.logo-container {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.logo-inicio img {
-  max-width: 300px;
-  height: auto;
+.logo-large {
+  width: 250px;
+  max-width: 90%;
+}
+
+.logo-small {
+  width: 120px;
+  max-width: 80%;
 }
