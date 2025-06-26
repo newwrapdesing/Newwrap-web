@@ -50,21 +50,26 @@
     Patrocinado por @Newurbaracingclub
   </footer>
 
+  <!-- Slider JS corregido -->
   <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slide");
+    window.onload = function () {
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".slide");
 
-    function mostrarSlide(n) {
-      slides.forEach(slide => slide.classList.remove("activo"));
-      slideIndex = (n + slides.length) % slides.length;
-      slides[slideIndex].classList.add("activo");
-    }
+      function mostrarSlide(n) {
+        slides.forEach(slide => slide.classList.remove("activo"));
+        slideIndex = (n + slides.length) % slides.length;
+        slides[slideIndex].classList.add("activo");
+      }
 
-    function cambiarSlide(n) {
-      mostrarSlide(slideIndex + n);
-    }
+      function cambiarSlide(n) {
+        mostrarSlide(slideIndex + n);
+      }
 
-    mostrarSlide(slideIndex);
+      window.cambiarSlide = cambiarSlide;
+
+      mostrarSlide(slideIndex);
+    };
   </script>
 </body>
 </html>
