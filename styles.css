@@ -1,94 +1,68 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f0f0; /* gris claro */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   color: #000;
 }
 
-.container {
-  display: flex;
-  min-height: 100vh;
-}
-
 .sidebar {
-  width: 200px;
-  background-color: #6a0dad; /* morado */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #7f3fbf;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar li {
-  margin: 15px 0;
+.sidebar h2 {
+  color: #1de9b6;
 }
 
 .sidebar a {
-  color: #6df0dd; /* turquesa vibrante */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
   display: block;
-  padding: 5px 10px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.sidebar a:hover {
-  background-color: #4e0a99;
-  color: white;
+  color: #000;
+  background-color: #1de9b6;
+  padding: 10px;
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .content {
-  flex: 1;
-  padding: 30px;
-}
-
-.content h1 {
-  color: #6df0dd; /* turquesa vibrante */
-  margin-bottom: 20px;
-}
-
-.product {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.product img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.product h3 {
-  color: #6a0dad;
-  margin-bottom: 5px;
-}
-
-.product p {
-  margin-bottom: 5px;
-}
-
-.product .price {
-  color: #000; /* negro para mejor visibilidad */
-  font-weight: bold;
+  margin-left: 240px;
+  padding: 20px;
 }
 
 footer {
+  margin-left: 240px;
+  padding: 10px;
+  background-color: #ddd;
   text-align: center;
-  padding: 15px;
-  background-color: #e0e0e0;
-  font-size: 0.9rem;
-  color: #444;
+}
+
+form label {
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #1de9b6;
+  color: #000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.precio {
+  font-weight: bold;
+  color: #000;
 }
