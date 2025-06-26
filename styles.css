@@ -13,7 +13,7 @@ body {
 
 .sidebar {
   background-color: #5e3780; /* morado */
-  color: #19857b; /* turquesa oscuro */
+  color: #00c2b8; /* turquesa vibrante */
   width: 220px;
   min-height: 100vh;
   padding: 20px;
@@ -24,7 +24,7 @@ body {
   margin-top: 0;
   font-weight: bold;
   font-size: 1.8em;
-  color: #19857b; /* turquesa oscuro */
+  color: #00c2b8; /* turquesa vibrante */
 }
 
 .sidebar ul {
@@ -46,7 +46,7 @@ body {
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
-  color: #19857b; /* turquesa oscuro */
+  color: #00c2b8; /* turquesa vibrante */
 }
 
 .content {
@@ -57,7 +57,7 @@ body {
 }
 
 .section-title {
-  color: #19857b; /* turquesa oscuro */
+  color: #00c2b8; /* turquesa vibrante */
   font-size: 2em;
   margin-bottom: 10px;
 }
