@@ -9,19 +9,15 @@
     body {
       margin: 0; padding: 0;
       font-family: 'Bangers', cursive;
-      color: #222;
-      background-color: #f0f0f0;
-      background-image:
-        radial-gradient(circle, rgba(0,0,0,0.02) 1px, transparent 1px),
-        radial-gradient(circle, rgba(0,0,0,0.02) 1px, transparent 1px);
-      background-position: 0 0, 25px 25px;
-      background-size: 50px 50px;
+      color: #f5f5f5;
+      background-color: #111;
+      background-image: radial-gradient(circle, #ff6f00 2px, transparent 2px);
+      background-size: 40px 40px;
       min-height: 100vh;
-      position: relative;
     }
     nav {
-      background: #e0e0e0cc;
-      border-bottom: 3px solid #1a237e;
+      background: #ff6f00cc;
+      border-bottom: 3px solid #008080;
       position: sticky; top: 0; z-index: 1000;
     }
     nav ul {
@@ -32,7 +28,7 @@
       margin: 0 15px;
     }
     nav a {
-      color: #1a237e;
+      color: #f5f5f5;
       text-decoration: none;
       padding: 15px;
       display: block;
@@ -40,31 +36,44 @@
       transition: color 0.3s, background-color 0.3s;
     }
     nav a:hover {
-      color: #3949ab;
-      background-color: #c5cae9;
+      color: #ff6f00;
+      background-color: #008080;
       border-radius: 5px;
     }
     h2 {
       text-align: center;
       margin-top: 60px;
-      font-size: 2.5em;
-      color: #1a237e;
+      font-size: 2.8em;
+      color: #ff6f00;
+      text-shadow: 2px 2px 6px #009999;
     }
     section {
-      max-width: 700px;
+      max-width: 800px;
       margin: 40px auto;
-      background: #fff;
-      padding: 20px;
+      background: #223344;
+      padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 0 15px #3949ab44;
-      font-size: 1.2em;
+      box-shadow: 0 0 20px #ff6f0044;
+      font-size: 1.3em;
       line-height: 1.6em;
+      color: #ddd;
+      text-align: center;
+    }
+    .logo {
+      margin: 30px 0;
+    }
+    .logo img {
+      max-width: 300px;
+      filter: drop-shadow(2px 4px 6px #000);
     }
     footer {
-      background: #e0e0e0cc;
-      color: #555;
+      background: #ff6f00cc;
+      color: #111;
       text-align: center;
       padding: 20px;
+      margin-top: 50px;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
   </style>
 </head>
@@ -79,15 +88,16 @@
     </ul>
   </nav>
 
-  <h2>Patrocinador Oficial: Newurbaracingclub</h2>
+  <h2>Patrocinador Oficial</h2>
   <section>
-    <p><strong>Newurbaracingclub</strong> es nuestro club patrocinador oficial, dedicado a la organización y participación en eventos de exposición y automovilismo.</p>
-    <p>Nos apoyan en cada proyecto y nos inspiran con su pasión por el motor y la cultura automovilística.</p>
-    <p>Si te interesa formar parte o asistir a sus eventos, síguelos en Instagram: <a href="https://instagram.com/newurbaracingclub" target="_blank">@newurbaracingclub</a>.</p>
+    <p>Estamos orgullosos de contar con el patrocinio de <strong>AutoWraps</strong>, líder en vinilos y personalización automotriz.</p>
+    <div class="logo">
+      <img src="images/autowraps_logo.png" alt="Logo AutoWraps" />
+    </div>
+    <p>Con su apoyo, seguimos ofreciendo los mejores productos y diseños exclusivos para tu coche.</p>
   </section>
 
   <footer>
-    <p>Patrocinado por Newurbaracingclub</p>
     <p>© 2025 New Wrap</p>
   </footer>
 </body>
