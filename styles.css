@@ -66,3 +66,12 @@ button {
   font-weight: bold;
   color: #000;
 }
+.logo-inicio {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-inicio img {
+  max-width: 300px;
+  height: auto;
+}
