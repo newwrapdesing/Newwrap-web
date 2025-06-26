@@ -1,55 +1,94 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #f2f2f2 url('https://i.imgur.com/JpFYjLh.png') repeat;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0; /* gris claro */
   color: #000;
 }
 
-.sidebar {
-  width: 220px;
-  background-color: #600080;
-  color: #00d9c0;
-  height: 100vh;
-  position: fixed;
-  padding: 20px;
+.container {
+  display: flex;
+  min-height: 100vh;
 }
 
-.sidebar h2 {
-  color: #00d9c0;
+.sidebar {
+  width: 200px;
+  background-color: #6a0dad; /* morado */
+  padding: 20px;
 }
 
 .sidebar ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
 }
 
-.sidebar ul li {
+.sidebar li {
   margin: 15px 0;
 }
 
-.sidebar ul li a {
-  color: #600080;
-  background-color: #00d9c0;
-  padding: 8px;
-  display: block;
+.sidebar a {
+  color: #6df0dd; /* turquesa vibrante */
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  padding: 5px 10px;
   border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-.sidebar ul li a:hover {
-  background-color: #00b3a0;
+.sidebar a:hover {
+  background-color: #4e0a99;
+  color: white;
 }
 
-.main {
-  margin-left: 240px;
-  padding: 20px;
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.content h1 {
+  color: #6df0dd; /* turquesa vibrante */
+  margin-bottom: 20px;
+}
+
+.product {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  color: #6a0dad;
+  margin-bottom: 5px;
+}
+
+.product p {
+  margin-bottom: 5px;
+}
+
+.product .price {
+  color: #000; /* negro para mejor visibilidad */
+  font-weight: bold;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #eee;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  padding: 15px;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+  color: #444;
 }
