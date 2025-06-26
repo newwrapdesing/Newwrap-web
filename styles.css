@@ -1,78 +1,108 @@
-/* styles.css */
-
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5; /* gris claro */
-  background-image: url('https://i.imgur.com/q7PQp0p.png'); /* patrón sutil de stickers en gris */
-  background-repeat: repeat;
-  background-position: center;
-  background-size: 100px 100px; /* tamaño del patrón */
-  color: #222; /* texto oscuro para buen contraste */
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.sidebar {
-  background-color: #5e3780; /* morado */
-  color: #00c2b8; /* turquesa vibrante */
-  width: 220px;
+body {
+  display: flex;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Gris claro limpio */
+  color: #000; /* Texto negro */
   min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #5e1ca2; /* Morado fuerte */
+  color: #40e0d0; /* Turquesa estilo tuning */
   padding: 20px;
-  position: fixed;
+  border-right: 3px dashed #40e0d0; /* Rayas turquesas */
 }
 
 .sidebar h2 {
-  margin-top: 0;
-  font-weight: bold;
-  font-size: 1.8em;
-  color: #00c2b8; /* turquesa vibrante */
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #40e0d0;
 }
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
 }
 
-.sidebar ul li {
-  margin: 15px 0;
+.sidebar li {
+  margin-bottom: 15px;
 }
 
-.sidebar ul li a {
-  color: #5e3780;
+.sidebar a {
   text-decoration: none;
+  color: #40e0d0;
   font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
-.sidebar ul li a:hover,
-.sidebar ul li a.active {
-  color: #00c2b8; /* turquesa vibrante */
+.sidebar a:hover {
+  color: #ffffff;
 }
 
-.content {
-  margin-left: 240px;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.85);
-  min-height: 100vh;
+/* Main content */
+.main {
+  flex: 1;
+  padding: 40px;
+  background-color: #f0f0f0;
 }
 
-.section-title {
-  color: #00c2b8; /* turquesa vibrante */
-  font-size: 2em;
+h1 {
+  color: #40e0d0;
+  margin-bottom: 20px;
+}
+
+/* Formulario contacto */
+form label,
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 100%;
   margin-bottom: 10px;
 }
 
-.price {
-  color: #000000; /* negro puro para los precios */
-  font-weight: bold;
-  font-size: 1.2em;
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.footer {
-  margin-top: 50px;
-  padding-top: 15px;
-  border-top: 1px solid #ccc;
-  font-size: 0.9em;
-  color: #555;
+form button {
+  background-color: #5e1ca2;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #40e0d0;
+  color: #000;
+}
+
+/* Precios */
+.precio {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #5e1ca2;
+  color: #40e0d0;
   text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
