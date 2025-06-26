@@ -21,19 +21,22 @@
   <div class="content">
     <h1 class="graffiti">Catálogo de productos por encargo</h1>
 
-    <!-- Parasol personalizado con sensor -->
+    <!-- Parasol personalizado con slider -->
     <div class="producto">
-      <div class="galeria">
-        <img src="parasol-frontal.jpg" alt="Parasol frontal">
-        <img src="parasol-derecha.jpg" alt="Parasol lateral derecho">
-        <img src="parasol-izquierda.jpg" alt="Parasol lateral izquierdo">
+      <div class="slider">
+        <button class="prev" onclick="cambiarSlide(-1)">❮</button>
+        <div class="slide-container">
+          <img class="slide activo" src="parasol-frontal.jpg" alt="Parasol frontal">
+          <img class="slide" src="parasol-derecha.jpg" alt="Parasol lateral derecho">
+          <img class="slide" src="parasol-izquierda.jpg" alt="Parasol lateral izquierdo">
+        </div>
+        <button class="next" onclick="cambiarSlide(1)">❯</button>
       </div>
       <p class="graffiti">¡Parasol personalizado con sensor! 😎</p>
-      <p>Lleva tu estilo al siguiente nivel con este parasol único para coches con sensor de luces o lluvia.<br>
-      <strong>Desde 20€</strong> — personalizable por encargo, varias vistas disponibles.</p>
+      <p>Diseño exclusivo en 3 ángulos. ¡Llévatelo desde <strong>20€</strong>! Encárgalo con tu estilo único.</p>
     </div>
 
-    <!-- Tapamatrículas Hyundai -->
+    <!-- Tapamatrícula Hyundai -->
     <div class="producto">
       <img src="tapamatricula-hyundai.jpg" alt="Tapamatrícula Hyundai personalizado">
       <p class="graffiti">Tapamatrículas personalizados</p>
@@ -41,11 +44,27 @@
       Diseño Hyundai personalizado.<br>
       <strong>Desde 20€ (pareja)</strong></p>
     </div>
-
   </div>
 
   <footer>
     Patrocinado por @Newurbaracingclub
   </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function mostrarSlide(n) {
+      slides.forEach(slide => slide.classList.remove("activo"));
+      slideIndex = (n + slides.length) % slides.length;
+      slides[slideIndex].classList.add("activo");
+    }
+
+    function cambiarSlide(n) {
+      mostrarSlide(slideIndex + n);
+    }
+
+    mostrarSlide(slideIndex);
+  </script>
 </body>
 </html>
