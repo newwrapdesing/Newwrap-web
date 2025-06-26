@@ -177,3 +177,23 @@ button:hover {
     width: 60px;
   }
 }
+.redes {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.redes li {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.redes a {
+  text-decoration: none;
+  color: #7f3fbf;
+  transition: color 0.3s ease;
+}
+
+.redes a:hover {
+  color: #1de9b6;
+}
