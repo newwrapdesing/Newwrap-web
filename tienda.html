@@ -9,19 +9,15 @@
     body {
       margin: 0; padding: 0;
       font-family: 'Bangers', cursive;
-      color: #222;
-      background-color: #f0f0f0;
-      background-image:
-        radial-gradient(circle, rgba(0,0,0,0.02) 1px, transparent 1px),
-        radial-gradient(circle, rgba(0,0,0,0.02) 1px, transparent 1px);
-      background-position: 0 0, 25px 25px;
-      background-size: 50px 50px;
+      color: #f5f5f5;
+      background-color: #111;
+      background-image: radial-gradient(circle, #ff6f00 2px, transparent 2px);
+      background-size: 40px 40px;
       min-height: 100vh;
-      position: relative;
     }
     nav {
-      background: #e0e0e0cc;
-      border-bottom: 3px solid #1a237e;
+      background: #ff6f00cc;
+      border-bottom: 3px solid #008080;
       position: sticky; top: 0; z-index: 1000;
     }
     nav ul {
@@ -32,7 +28,7 @@
       margin: 0 15px;
     }
     nav a {
-      color: #1a237e;
+      color: #f5f5f5;
       text-decoration: none;
       padding: 15px;
       display: block;
@@ -40,36 +36,66 @@
       transition: color 0.3s, background-color 0.3s;
     }
     nav a:hover {
-      color: #3949ab;
-      background-color: #c5cae9;
+      color: #ff6f00;
+      background-color: #008080;
       border-radius: 5px;
     }
     h2 {
       text-align: center;
       margin-top: 60px;
-      font-size: 2.5em;
-      color: #1a237e;
+      font-size: 2.8em;
+      color: #ff6f00;
+      text-shadow: 2px 2px 6px #009999;
     }
-    .btn-enlace {
-      background: #1a237e;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-      display: inline-block;
-      margin-top: 20px;
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #223344;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff6f0044;
+      font-size: 1.3em;
+      line-height: 1.6em;
+      color: #ddd;
     }
-    .btn-enlace:hover {
-      background: #3949ab;
-      color: #fff;
+    .producto-lista {
+      list-style: none;
+      padding: 0;
+    }
+    .producto-lista li {
+      background: #2a3a4a;
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ff6f0022;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .producto-lista img {
+      max-width: 120px;
+      border-radius: 8px;
+    }
+    .producto-lista div {
+      flex-grow: 1;
+    }
+    .producto-lista h3 {
+      margin: 0 0 10px;
+      color: #ff6f00;
+    }
+    .producto-lista p {
+      margin: 0;
+      font-size: 1em;
+      color: #ccc;
     }
     footer {
-      background: #e0e0e0cc;
-      color: #555;
+      background: #ff6f00cc;
+      color: #111;
       text-align: center;
       padding: 20px;
+      margin-top: 50px;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
   </style>
 </head>
@@ -84,15 +110,17 @@
     </ul>
   </nav>
 
-  <h2>Tienda</h2>
-  <section style="text-align:center; max-width: 600px; margin: 20px auto;">
-    <p>Estamos preparando nuestra tienda online. Mientras tanto, puedes encargarnos productos a través de Instagram o WhatsApp.</p>
-    <a href="https://instagram.com/newwrap2024" target="_blank" class="btn-enlace">Instagram</a>
-  </section>
-
-  <footer>
-    <p>Patrocinado por Newurbaracingclub</p>
-    <p>© 2025 New Wrap</p>
-  </footer>
-</body>
-</html>
+  <h2>Tienda Online</h2>
+  <section>
+    <ul class="producto-lista">
+      <li>
+        <img src="images/parasoles1.jpg" alt="Parasoles Modernos" />
+        <div>
+          <h3>Parasoles Modernos</h3>
+          <p>Protección eficaz contra el sol con diseños exclusivos.</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/pegatinas1.jpg" alt="Pegatinas Personalizadas" />
+        <div>
+         
