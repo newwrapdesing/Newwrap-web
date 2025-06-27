@@ -14,6 +14,7 @@ body {
   background-color: #7f3fbf;
   padding: 20px;
   box-sizing: border-box;
+  z-index: 100;
 }
 
 .sidebar h2 {
@@ -71,6 +72,7 @@ button {
   margin-top: 10px;
 }
 
+/* PRODUCTOS */
 .producto {
   margin-bottom: 40px;
 }
@@ -92,7 +94,7 @@ button {
   border-radius: 8px;
 }
 
-/* Slider */
+/* SLIDER */
 .slider {
   position: relative;
   width: 100%;
@@ -113,12 +115,27 @@ button {
   display: block;
 }
 
-/* Responsive para móviles y tablets */
+/* LOGOS */
+.logo-inicio {
+  width: 300px;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.logo-pequeno {
+  width: 120px;
+  max-width: 40%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .sidebar {
+    position: relative;
     width: 100%;
     height: auto;
-    position: relative;
   }
 
   .content {
@@ -140,5 +157,13 @@ button {
 
   .slider {
     max-width: 100%;
+  }
+
+  .logo-inicio {
+    width: 200px;
+  }
+
+  .logo-pequeno {
+    width: 90px;
   }
 }
