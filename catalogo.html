@@ -37,7 +37,7 @@
         <p>Diseño exclusivo en 3 ángulos. ¡Llévatelo desde <strong>20€</strong>!</p>
       </div>
 
-      <!-- Parasol sin sensor (renombrado a sombrilla) -->
+      <!-- Parasol sin sensor -->
       <div class="producto">
         <div class="slider">
           <button class="prev" onclick="cambiarSlide(-1)">❮</button>
@@ -59,23 +59,22 @@
 
   <script>
     window.onload = function () {
-      let currentSlideIndexes = [];
       const sliders = document.querySelectorAll(".slider");
 
-      sliders.forEach((slider, i) => {
-        currentSlideIndexes[i] = 0;
+      sliders.forEach(slider => {
         const slides = slider.querySelectorAll(".slide");
+        let currentIndex = 0;
 
-        function showSlide(n) {
-          slides.forEach(slide => slide.classList.remove("activo"));
-          currentSlideIndexes[i] = (n + slides.length) % slides.length;
-          slides[currentSlideIndexes[i]].classList.add("activo");
-        }
+        const showSlide = (n) => {
+          slides.forEach(s => s.classList.remove("activo"));
+          currentIndex = (n + slides.length) % slides.length;
+          slides[currentIndex].classList.add("activo");
+        };
 
-        slider.querySelector(".prev").onclick = () => showSlide(currentSlideIndexes[i] - 1);
-        slider.querySelector(".next").onclick = () => showSlide(currentSlideIndexes[i] + 1);
+        slider.querySelector(".prev").onclick = () => showSlide(currentIndex - 1);
+        slider.querySelector(".next").onclick = () => showSlide(currentIndex + 1);
 
-        showSlide(currentSlideIndexes[i]);
+        showSlide(currentIndex);
       });
     };
   </script>
