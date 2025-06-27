@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo - Newwrap</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="sidebar">
@@ -14,31 +15,41 @@
     <a href="catalogo.html">Catálogo</a>
     <a href="contacto.html">Contacto</a>
     <a href="patrocinadores.html">Patrocinadores</a>
-    <a href="comercialización.html">Merchandising</a>
+    <a href="merchandising.html">Merchandising</a>
   </div>
 
   <div class="content">
-    <h1>Catálogo</h1>
+    <h1 class="graffiti">Catálogo de productos por encargo</h1>
 
-    <!-- Parasol con sensor (slider) -->
-    <div class="producto">
-      <h2>Parasol personalizado con sensor</h2>
-      <div class="slider">
-        <img class="slide active" src="parasol-frontal.jpg" alt="Parasol Frontal" />
-        <img class="slide" src="sombrilla-derecha.jpg" alt="Parasol Derecha" />
-        <img class="slide" src="sombrilla-izquierda.jpg" alt="Parasol Izquierda" />
+    <div class="fila-productos">
+      <!-- Parasol con sensor -->
+      <div class="producto">
+        <div class="slider">
+          <button class="prev" onclick="cambiarSlide(-1)">❮</button>
+          <div class="slide-container">
+            <img class="slide activo" src="parasol-frontal.jpg" alt="Parasol frontal">
+            <img class="slide" src="parasol-derecha.jpg" alt="Parasol lateral derecho">
+            <img class="slide" src="parasol-izquierda.jpg" alt="Parasol lateral izquierdo">
+          </div>
+          <button class="next" onclick="cambiarSlide(1)">❯</button>
+        </div>
+        <p class="graffiti">¡Parasol personalizado con sensor! 😎</p>
+        <p>Diseño exclusivo en 3 ángulos. ¡Llévatelo desde <strong>20€</strong>!</p>
       </div>
-      <p class="precio">Desde 20€</p>
-    </div>
 
-    <!-- Parasol sin sensor -->
-    <div class="producto">
-      <h2>Parasol personalizado sin sensor</h2>
-      <div class="fila-parasoles">
-        <img src="sombrilla-liso1.jpg" alt="Parasol Liso 1" />
-        <img src="sombrilla-liso2.jpg" alt="Parasol Liso 2" />
+      <!-- Parasol sin sensor -->
+      <div class="producto">
+        <div class="slider">
+          <button class="prev" onclick="cambiarSlide(-1)">❮</button>
+          <div class="slide-container">
+            <img class="slide activo" src="sombrilla-liso1.jpg" alt="Sombrilla sin sensor - frente">
+            <img class="slide" src="sombrilla-liso2.jpg" alt="Sombrilla sin sensor - ángulo">
+          </div>
+          <button class="next" onclick="cambiarSlide(1)">❯</button>
+        </div>
+        <p class="graffiti">Parasol personalizado sin sensor</p>
+        <p>Estilo sencillo y limpio desde <strong>15€</strong>. Personalízalo a tu gusto.</p>
       </div>
-      <p class="precio">Desde 15€</p>
     </div>
   </div>
 
@@ -47,22 +58,25 @@
   </footer>
 
   <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
+    window.onload = function () {
+      const sliders = document.querySelectorAll(".slider");
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-          slide.classList.add('active');
-        }
+      sliders.forEach(slider => {
+        const slides = slider.querySelectorAll(".slide");
+        let currentIndex = 0;
+
+        const showSlide = (n) => {
+          slides.forEach(s => s.classList.remove("activo"));
+          currentIndex = (n + slides.length) % slides.length;
+          slides[currentIndex].classList.add("activo");
+        };
+
+        slider.querySelector(".prev").onclick = () => showSlide(currentIndex - 1);
+        slider.querySelector(".next").onclick = () => showSlide(currentIndex + 1);
+
+        showSlide(currentIndex);
       });
-    }
-
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }, 3000);
+    };
   </script>
 </body>
 </html>
