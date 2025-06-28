@@ -13,6 +13,7 @@ header {
   justify-content: space-between;
   padding: 10px 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .logo-container {
@@ -32,9 +33,10 @@ header {
 
 nav {
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
+  flex: 1;
 }
 
 nav a {
