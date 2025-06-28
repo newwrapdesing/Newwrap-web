@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📚 Catálogo - Newwrap</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">🏠 Inicio</a>
+      <a href="tienda.html">🛒 Tienda</a>
+      <a href="catalogo.html">📚 Catálogo</a>
+      <a href="contacto.html">📞 Contacto</a>
+      <a href="patrocinadores.html">🤝 Patrocinadores</a>
+      <a href="merchandising.html">👕 Merchandising</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h1>📚 Catálogo</h1>
+    <div class="product-grid">
+      <div class="product">
+        <div class="slider">
+          <img src="parasol-frontal.jpg" alt="Parasol Frontal">
+          <img src="parasol-lateral1.jpg" alt="Parasol Lateral 1">
+          <img src="parasol-lateral2.jpg" alt="Parasol Lateral 2">
+        </div>
+        <h3>🌞 Parasol con sensor</h3>
+        <p class="product-caption">Personalízalo a tu gusto. <strong>Desde 20€</strong></p>
+      </div>
+      <div class="product">
+        <div class="slider">
+          <img src="sombrilla-liso1.jpg" alt="Sombrilla Liso 1">
+          <img src="sombrilla-liso2.jpg" alt="Sombrilla Liso 2">
+        </div>
+        <h3>🌞 Parasol sin sensor</h3>
+        <p class="product-caption">Versión básica, resistente. <strong>Desde 15€</strong></p>
+      </div>
+      <div class="product">
+        <img src="tapamatriculas-hyundai.jpg" alt="Tapamatriculas Hyundai">
+        <h3>🔧 Tapamatriculas Hyundai</h3>
+        <p class="product-caption">Estilo y protección. <strong>Desde 20€</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Patrocinado por @Newurbaracingclub
+  </footer>
+
+  <script>
+    const sliders = document.querySelectorAll(".slider");
+    sliders.forEach(slider => {
+      let index = 0;
+      const images = slider.querySelectorAll("img");
+      images.forEach((img, i) => {
+        img.style.display = i === 0 ? "block" : "none";
+      });
+      setInterval(() => {
+        images[index].style.display = "none";
+        index = (index + 1) % images.length;
+        images[index].style.display = "block";
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
